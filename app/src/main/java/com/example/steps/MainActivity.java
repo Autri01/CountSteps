@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
-    TextView tvinfo,tvsteps;
+    TextView tvremaining,tvsteps;
     SensorManager sensorManager;
 
     boolean running =false;
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        tvremaining=(TextView)findViewById(R.id.tvremaining);
         tvsteps=(TextView) findViewById(R.id.tvsteps);
         sensorManager=(SensorManager)getSystemService(Context.SENSOR_SERVICE);
     }
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onSensorChanged(SensorEvent event) {
         if(running){
             tvsteps.setText(String.valueOf(event.values[0]));
+            tvremaining.setText(String.valueOf(10000-event.values[0]));
         }
     }
 

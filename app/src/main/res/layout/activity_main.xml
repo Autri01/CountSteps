@@ -10,11 +10,26 @@
 
 
     <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Target Steps" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="10000" />
+
+    <TextView
         android:id="@+id/tvinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Steps" />
+        android:text="Steps Taken" />
 
     <TextView
         android:id="@+id/tvsteps"
@@ -23,4 +38,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Remaining" />
+
+    <TextView
+        android:id="@+id/tvremaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="10000" />
 </LinearLayout>
